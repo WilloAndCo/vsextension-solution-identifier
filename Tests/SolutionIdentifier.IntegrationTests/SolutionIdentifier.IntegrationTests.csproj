@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Integration tests: each test starts Visual Studio 2022 and 2026 in their Experimental instance with Solution Identifier and
+       the Inspector extensions deployed, drives it through DTE (Visual Studio's automation API) and queries the identifier button through
+       the inspector. 
+	   The UI tests work Visual Studio with the real mouse using Windows UI Automation. 
+	   They reset the Experimental instance, open Visual Studio windows while they run, and fail if an Exp window is already open.-->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" PrivateAssets="all" />
+    <!-- DTE: Visual Studio's automation API. Same version as the extension's SDK uses. -->
+    <PackageReference Include="EnvDTE" Version="17.0.32112.339" />
+    <PackageReference Include="EnvDTE80" Version="17.0.32112.339" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The tests use the extension's own IDs and logic instead of duplicating. Its classes are internal; the
+         extension's AssemblyInfo.cs makes them visible to this project. -->
+    <ProjectReference Include="..\..\SolutionIdentifier\SolutionIdentifier.csproj" />
+  </ItemGroup>
+
+</Project>

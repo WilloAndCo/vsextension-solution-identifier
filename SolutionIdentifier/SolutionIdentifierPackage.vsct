@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="vsshlids.h" />
+
+	<Commands package="guidSolutionIdentifierPackage">
+
+		<Menus>
+			<!--
+			IDG_VS_MM_WINDOWHELP is the "window and help" section of the Menu Bar
+			Priority being last puts this at the far right side of the menu bar group
+			TextIsAnchorCommand shows the last command text and icon
+			DynamicVisibility it can be hidden when not needed
+			-->
+			<Menu guid="guidExtensionCmdSet" id="MenuBarSplitButton" priority="0xFFFF" type="MenuControllerLatched">
+				<Parent guid="guidSHLMainMenu" id="IDG_VS_MM_WINDOWHELP" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>TextIsAnchorCommand</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Menu>
+		</Menus>
+
+		<Groups>
+			<Group guid="guidExtensionCmdSet" id="ChangeIdentifierGroup" priority="0x0100">
+				<Parent guid="guidExtensionCmdSet" id="MenuBarSplitButton" />
+			</Group>
+			<Group guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" priority="0x0200">
+				<Parent guid="guidExtensionCmdSet" id="MenuBarSplitButton" />
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<!--
+			TextChanges so the buttons text can change at run time.
+			NoShowOnMenuController stops the button from showing in the drop down menu even if it is set to visible for the Split Button
+			-->
+			<Button guid="guidExtensionCmdSet" id="RoseSquareButton" priority="0x0200" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpRoseSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PeachSquareButton" priority="0x0201" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPeachSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="ButterSquareButton" priority="0x0202" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpButterSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="MintSquareButton" priority="0x0203" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpMintSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="AquaSquareButton" priority="0x0204" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpAquaSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SkySquareButton" priority="0x0205" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSkySquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="LavenderSquareButton" priority="0x0206" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpLavenderSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PinkSquareButton" priority="0x0207" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPinkSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="CloudSquareButton" priority="0x0208" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpCloudSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SandSquareButton" priority="0x0209" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSandSquare" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidExtensionCmdSet" id="RoseCircleButton" priority="0x020A" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpRoseCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PeachCircleButton" priority="0x020B" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPeachCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="ButterCircleButton" priority="0x020C" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpButterCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="MintCircleButton" priority="0x020D" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpMintCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="AquaCircleButton" priority="0x020E" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpAquaCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SkyCircleButton" priority="0x020F" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSkyCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="LavenderCircleButton" priority="0x0210" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpLavenderCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PinkCircleButton" priority="0x0211" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPinkCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="CloudCircleButton" priority="0x0212" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpCloudCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SandCircleButton" priority="0x0213" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSandCircle" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidExtensionCmdSet" id="RoseDiamondButton" priority="0x0214" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpRoseDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PeachDiamondButton" priority="0x0215" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPeachDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="ButterDiamondButton" priority="0x0216" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpButterDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="MintDiamondButton" priority="0x0217" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpMintDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="AquaDiamondButton" priority="0x0218" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpAquaDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SkyDiamondButton" priority="0x0219" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSkyDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="LavenderDiamondButton" priority="0x021A" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpLavenderDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PinkDiamondButton" priority="0x021B" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPinkDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="CloudDiamondButton" priority="0x021C" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpCloudDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SandDiamondButton" priority="0x021D" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSandDiamond" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidExtensionCmdSet" id="RoseStarButton" priority="0x021E" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpRoseStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PeachStarButton" priority="0x021F" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPeachStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="ButterStarButton" priority="0x0220" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpButterStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="MintStarButton" priority="0x0221" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpMintStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="AquaStarButton" priority="0x0222" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpAquaStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SkyStarButton" priority="0x0223" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSkyStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="LavenderStarButton" priority="0x0224" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpLavenderStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PinkStarButton" priority="0x0225" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPinkStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="CloudStarButton" priority="0x0226" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpCloudStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SandStarButton" priority="0x0227" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSandStar" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidExtensionCmdSet" id="RoseLightningButton" priority="0x0228" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpRoseLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PeachLightningButton" priority="0x0229" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPeachLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="ButterLightningButton" priority="0x022A" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpButterLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="MintLightningButton" priority="0x022B" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpMintLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="AquaLightningButton" priority="0x022C" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpAquaLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SkyLightningButton" priority="0x022D" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSkyLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="LavenderLightningButton" priority="0x022E" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpLavenderLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="PinkLightningButton" priority="0x022F" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpPinkLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="CloudLightningButton" priority="0x0230" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpCloudLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidExtensionCmdSet" id="SandLightningButton" priority="0x0231" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ColourAndShapeButtonsGroup" />
+				<Icon guid="guidIdentifierIcons" id="bmpSandLightning" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<CommandFlag>IconAndText</CommandFlag>
+				<CommandFlag>TextChanges</CommandFlag>
+				<CommandFlag>NoShowOnMenuController</CommandFlag>
+				<Strings>
+					<ButtonText>My Solution Identifier</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidExtensionCmdSet" id="ChangeIdentifierButton" priority="0x0100" type="Button">
+				<Parent guid="guidExtensionCmdSet" id="ChangeIdentifierGroup" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<Strings>
+					<ButtonText>Change identifier...</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+
+		<Bitmaps>
+			<!-- 16x16 icons for all the colour shape combinations. The value of each IDSymbol inside guidIdentifierIcons must match that picture's position in the PNG. -->
+			<Bitmap guid="guidIdentifierIcons" href="Resources\IdentifierIcons.png"
+					usedList="bmpRoseSquare, 
+							  bmpPeachSquare, 
+							  bmpButterSquare, 
+							  bmpMintSquare, 
+							  bmpAquaSquare, 
+							  bmpSkySquare, 
+							  bmpLavenderSquare, 
+							  bmpPinkSquare, 
+							  bmpCloudSquare, 
+							  bmpSandSquare, 
+							  bmpRoseCircle,
+							  bmpPeachCircle,
+							  bmpButterCircle,
+							  bmpMintCircle,
+							  bmpAquaCircle,
+							  bmpSkyCircle,
+							  bmpLavenderCircle,
+							  bmpPinkCircle,
+							  bmpCloudCircle,
+							  bmpSandCircle,
+							  bmpRoseDiamond,
+							  bmpPeachDiamond,
+							  bmpButterDiamond,
+							  bmpMintDiamond,
+							  bmpAquaDiamond,
+							  bmpSkyDiamond,
+							  bmpLavenderDiamond,
+							  bmpPinkDiamond,
+							  bmpCloudDiamond,
+							  bmpSandDiamond,
+							  bmpRoseStar,
+							  bmpPeachStar,
+							  bmpButterStar,
+							  bmpMintStar,
+							  bmpAquaStar,
+							  bmpSkyStar,
+							  bmpLavenderStar,
+							  bmpPinkStar,
+							  bmpCloudStar,
+							  bmpSandStar,
+							  bmpRoseLightning,
+							  bmpPeachLightning,
+							  bmpButterLightning,
+							  bmpMintLightning,
+							  bmpAquaLightning,
+							  bmpSkyLightning,
+							  bmpLavenderLightning,
+							  bmpPinkLightning,
+							  bmpCloudLightning,
+							  bmpSandLightning" />
+		</Bitmaps>
+
+	</Commands>
+
+	<Symbols>
+		<!-- Must match SolutionIdentifierPackage.PackageGuidString. -->
+		<GuidSymbol name="guidSolutionIdentifierPackage" value="{15a6b44b-7397-466d-91fa-4ebff0ee5940}" />
+
+		<!-- Must match MenuBarSplitButton.ExtensionCmdSetGuid and ChangeIdentifierButtonId, and IdentifierPalette.CalculateColourAndShapeButtonId. -->
+		<GuidSymbol name="guidExtensionCmdSet" value="{707578c8-f679-472b-b9db-d03fa17b0d46}">
+			<!-- Split Button on the top menu bar -->
+			<IDSymbol name="MenuBarSplitButton" value="0x1000" />
+			<!-- Group for extra commands, only need 1 for change identifier -->
+			<IDSymbol name="ChangeIdentifierGroup" value="0x1100" />
+			<IDSymbol name="ChangeIdentifierButton" value="0x0200" />
+			<!-- Group for all the colour shape combinations -->
+			<IDSymbol name="ColourAndShapeButtonsGroup" value="0x1101" />
+			<IDSymbol name="RoseSquareButton" value="0x0300" />
+			<IDSymbol name="PeachSquareButton" value="0x0301" />
+			<IDSymbol name="ButterSquareButton" value="0x0302" />
+			<IDSymbol name="MintSquareButton" value="0x0303" />
+			<IDSymbol name="AquaSquareButton" value="0x0304" />
+			<IDSymbol name="SkySquareButton" value="0x0305" />
+			<IDSymbol name="LavenderSquareButton" value="0x0306" />
+			<IDSymbol name="PinkSquareButton" value="0x0307" />
+			<IDSymbol name="CloudSquareButton" value="0x0308" />
+			<IDSymbol name="SandSquareButton" value="0x0309" />
+			<IDSymbol name="RoseCircleButton" value="0x030A" />
+			<IDSymbol name="PeachCircleButton" value="0x030B" />
+			<IDSymbol name="ButterCircleButton" value="0x030C" />
+			<IDSymbol name="MintCircleButton" value="0x030D" />
+			<IDSymbol name="AquaCircleButton" value="0x030E" />
+			<IDSymbol name="SkyCircleButton" value="0x030F" />
+			<IDSymbol name="LavenderCircleButton" value="0x0310" />
+			<IDSymbol name="PinkCircleButton" value="0x0311" />
+			<IDSymbol name="CloudCircleButton" value="0x0312" />
+			<IDSymbol name="SandCircleButton" value="0x0313" />
+			<IDSymbol name="RoseDiamondButton" value="0x0314" />
+			<IDSymbol name="PeachDiamondButton" value="0x0315" />
+			<IDSymbol name="ButterDiamondButton" value="0x0316" />
+			<IDSymbol name="MintDiamondButton" value="0x0317" />
+			<IDSymbol name="AquaDiamondButton" value="0x0318" />
+			<IDSymbol name="SkyDiamondButton" value="0x0319" />
+			<IDSymbol name="LavenderDiamondButton" value="0x031A" />
+			<IDSymbol name="PinkDiamondButton" value="0x031B" />
+			<IDSymbol name="CloudDiamondButton" value="0x031C" />
+			<IDSymbol name="SandDiamondButton" value="0x031D" />
+			<IDSymbol name="RoseStarButton" value="0x031E" />
+			<IDSymbol name="PeachStarButton" value="0x031F" />
+			<IDSymbol name="ButterStarButton" value="0x0320" />
+			<IDSymbol name="MintStarButton" value="0x0321" />
+			<IDSymbol name="AquaStarButton" value="0x0322" />
+			<IDSymbol name="SkyStarButton" value="0x0323" />
+			<IDSymbol name="LavenderStarButton" value="0x0324" />
+			<IDSymbol name="PinkStarButton" value="0x0325" />
+			<IDSymbol name="CloudStarButton" value="0x0326" />
+			<IDSymbol name="SandStarButton" value="0x0327" />
+			<IDSymbol name="RoseLightningButton" value="0x0328" />
+			<IDSymbol name="PeachLightningButton" value="0x0329" />
+			<IDSymbol name="ButterLightningButton" value="0x032A" />
+			<IDSymbol name="MintLightningButton" value="0x032B" />
+			<IDSymbol name="AquaLightningButton" value="0x032C" />
+			<IDSymbol name="SkyLightningButton" value="0x032D" />
+			<IDSymbol name="LavenderLightningButton" value="0x032E" />
+			<IDSymbol name="PinkLightningButton" value="0x032F" />
+			<IDSymbol name="CloudLightningButton" value="0x0330" />
+			<IDSymbol name="SandLightningButton" value="0x0331" />
+		</GuidSymbol>
+
+		<GuidSymbol name="guidIdentifierIcons" value="{28894dc6-31cc-4d7e-8f53-65d42c6d4361}">
+			<IDSymbol name="bmpRoseSquare" value="1" />
+			<IDSymbol name="bmpPeachSquare" value="2" />
+			<IDSymbol name="bmpButterSquare" value="3" />
+			<IDSymbol name="bmpMintSquare" value="4" />
+			<IDSymbol name="bmpAquaSquare" value="5" />
+			<IDSymbol name="bmpSkySquare" value="6" />
+			<IDSymbol name="bmpLavenderSquare" value="7" />
+			<IDSymbol name="bmpPinkSquare" value="8" />
+			<IDSymbol name="bmpCloudSquare" value="9" />
+			<IDSymbol name="bmpSandSquare" value="10" />
+			<IDSymbol name="bmpRoseCircle" value="11" />
+			<IDSymbol name="bmpPeachCircle" value="12" />
+			<IDSymbol name="bmpButterCircle" value="13" />
+			<IDSymbol name="bmpMintCircle" value="14" />
+			<IDSymbol name="bmpAquaCircle" value="15" />
+			<IDSymbol name="bmpSkyCircle" value="16" />
+			<IDSymbol name="bmpLavenderCircle" value="17" />
+			<IDSymbol name="bmpPinkCircle" value="18" />
+			<IDSymbol name="bmpCloudCircle" value="19" />
+			<IDSymbol name="bmpSandCircle" value="20" />
+			<IDSymbol name="bmpRoseDiamond" value="21" />
+			<IDSymbol name="bmpPeachDiamond" value="22" />
+			<IDSymbol name="bmpButterDiamond" value="23" />
+			<IDSymbol name="bmpMintDiamond" value="24" />
+			<IDSymbol name="bmpAquaDiamond" value="25" />
+			<IDSymbol name="bmpSkyDiamond" value="26" />
+			<IDSymbol name="bmpLavenderDiamond" value="27" />
+			<IDSymbol name="bmpPinkDiamond" value="28" />
+			<IDSymbol name="bmpCloudDiamond" value="29" />
+			<IDSymbol name="bmpSandDiamond" value="30" />
+			<IDSymbol name="bmpRoseStar" value="31" />
+			<IDSymbol name="bmpPeachStar" value="32" />
+			<IDSymbol name="bmpButterStar" value="33" />
+			<IDSymbol name="bmpMintStar" value="34" />
+			<IDSymbol name="bmpAquaStar" value="35" />
+			<IDSymbol name="bmpSkyStar" value="36" />
+			<IDSymbol name="bmpLavenderStar" value="37" />
+			<IDSymbol name="bmpPinkStar" value="38" />
+			<IDSymbol name="bmpCloudStar" value="39" />
+			<IDSymbol name="bmpSandStar" value="40" />
+			<IDSymbol name="bmpRoseLightning" value="41" />
+			<IDSymbol name="bmpPeachLightning" value="42" />
+			<IDSymbol name="bmpButterLightning" value="43" />
+			<IDSymbol name="bmpMintLightning" value="44" />
+			<IDSymbol name="bmpAquaLightning" value="45" />
+			<IDSymbol name="bmpSkyLightning" value="46" />
+			<IDSymbol name="bmpLavenderLightning" value="47" />
+			<IDSymbol name="bmpPinkLightning" value="48" />
+			<IDSymbol name="bmpCloudLightning" value="49" />
+			<IDSymbol name="bmpSandLightning" value="50" />
+		</GuidSymbol>
+	</Symbols>
+
+</CommandTable>

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Unit tests: the extension's rules that don't need Visual Studio (path shortening, the default colour and icon,
+       the palette), and checks that the icon strip and the .vsct still match the palette. They run in seconds and
+       start nothing. In Test Explorer they are grouped under the trait Category = Unit. -->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <!-- IdentifierPalette uses WPF's Color, and the strip checks read the PNG with WPF. -->
+    <UseWPF>true</UseWPF>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The classes under test are internal; the extension's AssemblyInfo.cs makes them visible to this project. -->
+    <ProjectReference Include="..\..\SolutionIdentifier\SolutionIdentifier.csproj" />
+  </ItemGroup>
+
+</Project>
